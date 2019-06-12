@@ -1,10 +1,8 @@
-.hero {
-	width: 100%;
-}
-
-.hero img{
-	width: 100%;
-}
+/*
+見失わないために
+1. 大枠から上に書いていく.
+2. 共通する要素は見つけ出してまとめる。
+*/
 
 section {
 	width: 100%;
@@ -12,96 +10,110 @@ section {
 
 section#hero {
 	width: 100%;
+	height: 600px;
+	overflow: hidden;
+}
+section#hero img{
+	width: 100%;
+	min-width: 1080px;
+}
+section#hero {
+	width: 100%;
 	position: relative;
 }
-
-div.menu {
+section#hero div.menu {
 	position: absolute;
-	bottom: 30px;
+	bottom: 0px;
 	height: 60px;
 	line-height: 60px;
 	width: 100%;
 	background: rgba(200,200,200,.7);
 }
 
-div.menu ul {
+section#hero div.menu ul {
 	display: flex;
 	justify-content: space-around;
 	width: 800px;
 	margin: auto;
 }
-
-div.menu ul li {
-	margin: 0 10px;
+section#hero div.menu ul li a {
+	font-size: 24px;
+	padding: 0 40px;
+	border-right: 1px solid #555;
+}
+section#hero div.menu ul li:last-child a {
+	border-right: none;
 }
 
-section#oshirase {
+section#concept {
 	display: flex;
 	justify-content: space-around;
 	padding: 20px;
 }
-
-section#oshirase p {
+section#concept p {
 	line-height: 32px;
 }
 
-section#pictures {
+
+section#gallery {
 	display: flex;
 	overflow: hidden;
 	background: rgb(240,241,236);
-	/* height: 500px; */
 }
-
-section#pictures img {
+section#gallery img {
 	display: flex;
 	margin: 150px 20px;
 }
 
-section#message {
+
+section#project {
 	display: flex;
 	justify-content: space-between;
-	width: 1200px;
+	padding: 60px;
+	margin: auto;
+	width: 1100px;
 }
-
-section#message div{
+section#project div{
+	/*flexを使うと子要素はwidthではなく代flex-basisを使う*/
 	overflow: hidden;
 	display: flex;
-	width: 400px;
-	height: 400px;
+	flex-basis: 360px;
+	height: 360px;
 }
-
-section#message div.left-picture, section#message div.right-picture{
-	border-radius: 200px;
+section#project div.left-picture, section#project div.right-picture{
+	border-radius: 180px;
 }
-
-section#message div.message p{
+section#project div.message p{
 	text-align: center;
+	writing-mode: vertical-rl;
 	margin: auto;
 }
 
-section#living {
+
+section#menu {
 	background: rgb(236,240,226);
 }
-
-section#living .wrapper{
-	width: 1000px;
+section#menu .wrapper{
+	width: 985px;
+	padding: 80px 0;
 	margin: 0 auto;
-	padding: 100px;
-
+	display: flex;
+	flex-wrap: wrap;
 }
-
-section#living .wrapper img{
+section#menu .wrapper img{
 	background: white;
 }
+section#menu .wrapper img:hover{
+	background: rgb(236,250,226);;
+}
+
 
 footer {
 	width: 100%;
 }
-
 footer .wrapper_ue, footer .wrapper_shita {
 	display: flex;
-	width: 9840px;
-	margin: auto;
+	justify-content: center;
 }
 footer .wrapper_ue .right-picture{
 	height: 50px;
@@ -114,24 +126,36 @@ footer .wrapper_ue ul{
 	margin: 30px;
 }
 footer .wrapper_ue ul li{
-	margin: 10px;
+	font-size: 20px;
 }
-
-
+footer .wrapper_ue ul li a{
+	padding: 0 20px;
+	border-right: 1px solid #aaa;
+}
+footer .wrapper_ue ul li:last-child a{
+	border-right: none;
+}
 footer .wrapper_shita ul{
 	display: flex;
 	flex-wrap: wrap;
 	margin: 30px;
-	width: 800px;
+	width: 700px;
 }
-footer .wrapper_shita ul li{
-	/* margin: 10px; */
-	/* padding-right: 10px;
-	border-right: 1px solid #aaa; */
-}
-
 footer .wrapper_shita ul li span{
-	margin: 10px;
-	padding-right: 10px;
+	padding: 0 10px;
 	border-right: 1px solid #aaa;
+	font-size: 14px;
+	color: #333;
+}
+/* 最後の要素だけborderをなくす */
+footer .wrapper_shita ul li:last-child span{
+	border-right: none;
+}
+footer .wrapper_shita .sns-icons{
+	width: 140px;
+	display: flex;
+	align-items: center;
+}
+footer .wrapper_shita .sns-icons img{
+	margin: 10px;
 }
