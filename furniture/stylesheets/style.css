@@ -1,0 +1,137 @@
+.hero {
+	width: 100%;
+}
+
+.hero img{
+	width: 100%;
+}
+
+section {
+	width: 100%;
+}
+
+section#hero {
+	width: 100%;
+	position: relative;
+}
+
+div.menu {
+	position: absolute;
+	bottom: 30px;
+	height: 60px;
+	line-height: 60px;
+	width: 100%;
+	background: rgba(200,200,200,.7);
+}
+
+div.menu ul {
+	display: flex;
+	justify-content: space-around;
+	width: 800px;
+	margin: auto;
+}
+
+div.menu ul li {
+	margin: 0 10px;
+}
+
+section#oshirase {
+	display: flex;
+	justify-content: space-around;
+	padding: 20px;
+}
+
+section#oshirase p {
+	line-height: 32px;
+}
+
+section#pictures {
+	display: flex;
+	overflow: hidden;
+	background: rgb(240,241,236);
+	/* height: 500px; */
+}
+
+section#pictures img {
+	display: flex;
+	margin: 150px 20px;
+}
+
+section#message {
+	display: flex;
+	justify-content: space-between;
+	width: 1200px;
+}
+
+section#message div{
+	overflow: hidden;
+	display: flex;
+	width: 400px;
+	height: 400px;
+}
+
+section#message div.left-picture, section#message div.right-picture{
+	border-radius: 200px;
+}
+
+section#message div.message p{
+	text-align: center;
+	margin: auto;
+}
+
+section#living {
+	background: rgb(236,240,226);
+}
+
+section#living .wrapper{
+	width: 1000px;
+	margin: 0 auto;
+	padding: 100px;
+
+}
+
+section#living .wrapper img{
+	background: white;
+}
+
+footer {
+	width: 100%;
+}
+
+footer .wrapper_ue, footer .wrapper_shita {
+	display: flex;
+	width: 9840px;
+	margin: auto;
+}
+footer .wrapper_ue .right-picture{
+	height: 50px;
+	overflow: hidden;
+	background: #aaa;
+	margin: 20px;
+}
+footer .wrapper_ue ul{
+	display: flex;
+	margin: 30px;
+}
+footer .wrapper_ue ul li{
+	margin: 10px;
+}
+
+
+footer .wrapper_shita ul{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 30px;
+	width: 800px;
+}
+footer .wrapper_shita ul li{
+	/* margin: 10px; */
+	/* padding-right: 10px;
+	border-right: 1px solid #aaa; */
+}
+
+footer .wrapper_shita ul li span{
+	margin: 10px;
+	padding-right: 10px;
+	border-right: 1px solid #aaa;
+}
